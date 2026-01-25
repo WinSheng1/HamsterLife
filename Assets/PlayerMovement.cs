@@ -34,9 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveInput = context.ReadValue<Vector2>();
 
-        Debug.Log("Move X: " + moveInput.x);
         animator.SetFloat("InputX", moveInput.x);
-        Debug.Log("Move Y: " + moveInput.y);
         animator.SetFloat("InputY", moveInput.y);
     }
 }
