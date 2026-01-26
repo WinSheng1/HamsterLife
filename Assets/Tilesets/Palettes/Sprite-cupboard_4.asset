@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Sprite-cupboard_2
+  m_Name: Sprite-cupboard_4
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 34837732, guid: 62451c1b06d2ced489843ee874f73006, type: 3}
+  m_Sprite: {fileID: 2118338352, guid: 62451c1b06d2ced489843ee874f73006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

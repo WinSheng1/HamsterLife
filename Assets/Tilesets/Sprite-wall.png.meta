@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 62451c1b06d2ced489843ee874f73006
+guid: 0e3a8f8b0dfae7f4e9814b892bbc1b96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1406895041305189890
-    second: Sprite-cupboard_0
+      213: 1427607238169482992
+    second: Sprite-wall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-cupboard_0
+      name: Sprite-wall_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -115,58 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20e1145069b468310800000000000000
-      internalID: 1406895041305189890
+      spriteID: 0f65ed52831efc310800000000000000
+      internalID: 1427607238169482992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-cupboard_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19af8b0d79dfd8a49bc611ad05abad72
-      internalID: -1776264721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-cupboard_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 306ae940ceda9ad46a71f4ed1bde36bc
-      internalID: 34837732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-cupboard_3
+      name: Sprite-wall_1
       rect:
         serializedVersion: 2
         x: 16
@@ -181,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91f5d238593c73347b0b0af058001989
-      internalID: -1050359682
+      spriteID: d5e8f10425a12e149971767caf164b77
+      internalID: 256681220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-cupboard_4
+      name: Sprite-wall_2
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b5a6475a3c74b45af924a08897e1a0
-      internalID: 2118338352
+      spriteID: 5437e173ae363a148a7f3664c873c628
+      internalID: -1782874857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-cupboard_5
+      name: Sprite-wall_3
       rect:
         serializedVersion: 2
         x: 16
@@ -225,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f0bd8a9bda3f6a489ab2fad019008fc
-      internalID: 333556287
+      spriteID: 700b593718a008548912b626f5e9e9e3
+      internalID: -936476707
       vertices: []
       indices: 
       edges: []
@@ -235,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 38195bd9cba35d04b81cfefa5926872c
+    spriteID: 6500bf47bf0940d41be72e123b6e68c5
     internalID: 0
     vertices: []
     indices: 
@@ -247,12 +203,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-cupboard_0: 1406895041305189890
-      Sprite-cupboard_1: -1776264721
-      Sprite-cupboard_2: 34837732
-      Sprite-cupboard_3: -1050359682
-      Sprite-cupboard_4: 2118338352
-      Sprite-cupboard_5: 333556287
+      Sprite-wall_0: 1427607238169482992
+      Sprite-wall_1: 256681220
+      Sprite-wall_2: -1782874857
+      Sprite-wall_3: -936476707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
