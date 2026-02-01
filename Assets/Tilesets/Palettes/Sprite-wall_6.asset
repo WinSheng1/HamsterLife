@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Sprite-wall_2
+  m_Name: Sprite-wall_6
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -528818108, guid: 0e3a8f8b0dfae7f4e9814b892bbc1b96, type: 3}
+  m_Sprite: {fileID: 225770755, guid: 0e3a8f8b0dfae7f4e9814b892bbc1b96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
