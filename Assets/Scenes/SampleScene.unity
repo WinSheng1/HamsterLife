@@ -4378,6 +4378,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450925523}
   m_CullTransparentMesh: 1
+--- !u!1 &479623816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479623817}
+  m_Layer: 0
+  m_Name: 'Room2_Spawn '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479623817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479623816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.77, y: -1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1864432536}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &481612263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,7 +4683,7 @@ Transform:
   m_GameObject: {fileID: 534806577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.05, y: -1.8, z: 0}
+  m_LocalPosition: {x: 12.918, y: -1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4670,9 +4701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77dba79187e4f54287b9216aaec1136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  polygonCollider: {fileID: 1666902318}
-  direction: 2
-  transitionOffset: 3
+  targetRoom: 0
+  targetSpawnPoint: {fileID: 2108623802}
 --- !u!61 &534806580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5588,6 +5618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364524315}
+  - component: {fileID: 1364524316}
   m_Layer: 0
   m_Name: MapBounds
   m_TagString: Untagged
@@ -5612,6 +5643,23 @@ Transform:
   - {fileID: 1864432536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364524316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364524314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881b01c4354a40245b9f6dc2fe9fa714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  boundaries:
+  - roomId: 0
+    collider: {fileID: 1666902318}
+  - roomId: 1
+    collider: {fileID: 1864432537}
 --- !u!1 &1575257013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,7 +5985,7 @@ Transform:
   m_GameObject: {fileID: 1601313703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.69, y: -1.81, z: 0}
+  m_LocalPosition: {x: 11.9, y: -1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5955,9 +6003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77dba79187e4f54287b9216aaec1136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  polygonCollider: {fileID: 1864432537}
-  direction: 3
-  transitionOffset: 3
+  targetRoom: 1
+  targetSpawnPoint: {fileID: 479623817}
 --- !u!61 &1601313706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6035,6 +6082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1601313704}
+  - {fileID: 2108623802}
   m_Father: {fileID: 1364524315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1666902318
@@ -6447,6 +6495,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 534806578}
+  - {fileID: 479623817}
   m_Father: {fileID: 1364524315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1864432537
@@ -10601,6 +10650,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &2108623801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108623802}
+  m_Layer: 0
+  m_Name: Room1_Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108623802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108623801}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.0031048455, w: 0.9999952}
+  m_LocalPosition: {x: 11.06, y: -1.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1666902317}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.356}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

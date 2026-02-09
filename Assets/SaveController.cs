@@ -5,11 +5,12 @@ using UnityEngine;
 public class SaveController : MonoBehaviour
 {
     private string saveLocation;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private CameraBoundsManager boundsManager;
+
     void Start()
     {
+        boundsManager = FindFirstObjectByType<CameraBoundsManager>();
         saveLocation = Path.Combine(Application.persistentDataPath, "savefile.json");
-
         LoadGame();
     }
 
@@ -17,7 +18,7 @@ public class SaveController : MonoBehaviour
     {
         SaveData data = new SaveData();
         data.playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        data.mapBoundary = FindFirstObjectByType<CinemachineConfiner2D>().BoundingShape2D.name;
+        data.currentRoom = boundsManager.GetCurrentRoom();
 
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(saveLocation, json);
@@ -34,8 +35,7 @@ public class SaveController : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = data.playerPosition;
 
-            CinemachineConfiner2D confiner = FindFirstObjectByType<CinemachineConfiner2D>();
-            confiner.BoundingShape2D = GameObject.Find(data.mapBoundary).GetComponent<PolygonCollider2D>();
+            boundsManager.SetRoom(data.currentRoom);
 
             Debug.Log("Game Loaded from " + saveLocation);
         }
