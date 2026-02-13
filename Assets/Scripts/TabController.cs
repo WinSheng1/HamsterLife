@@ -3,8 +3,10 @@ using UnityEngine.UI;
 
 public class TabController : MonoBehaviour
 {
-    public Image[] tabImages;
-    public GameObject[] pages;
+    [SerializeField] private Image[] tabImages;
+    [SerializeField] private GameObject[] pages;
+    private Color unselectedColor = Color.gray;
+    private Color selectedColor = Color.white;
 
     void Start()
     {
@@ -15,10 +17,22 @@ public class TabController : MonoBehaviour
     {
         for (int i = 0; i < pages.Length; i++)
         {
-            tabImages[i].color = Color.gray;
             pages[i].SetActive(false);
+            SetTabState(i, false);
         }
-        tabImages[tabIndex].color = Color.white;
         pages[tabIndex].SetActive(true);
+        SetTabState(tabIndex, true);
+    }
+
+
+    private void SetTabState(int i, bool selected)
+    {
+        Color c = selected ? selectedColor : unselectedColor;
+
+        tabImages[i].color = c;
+
+        ButtonChangeTint hover = tabImages[i].GetComponent<ButtonChangeTint>();
+        if (hover != null)
+            hover.SetBaseColors(c);
     }
 }
