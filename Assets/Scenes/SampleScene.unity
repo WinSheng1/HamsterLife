@@ -5775,7 +5775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &726684896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5844,6 +5844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739122840}
   - component: {fileID: 739122841}
+  - component: {fileID: 739122842}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5878,6 +5879,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1eec6637187da443929c1aa9275bb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &739122842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739122838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2be643fb7471c34d9912403e1403577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  inventoryPanel: {fileID: 1222152557}
+  slotPrefab: {fileID: 3190793926576446872, guid: 4b88de318f629a046b5fec8a5f79dc15, type: 3}
+  numberOfSlots: 30
+  itemPrefabs:
+  - {fileID: 2981360604213001255, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+  - {fileID: 2371800223834806716, guid: ff3a0c41c4a282449beea7b9cd2ca6a8, type: 3}
 --- !u!1 &923152643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,6 +6093,7 @@ GameObject:
   - component: {fileID: 1222152558}
   - component: {fileID: 1222152560}
   - component: {fileID: 1222152559}
+  - component: {fileID: 1222152561}
   m_Layer: 5
   m_Name: InventoryPage
   m_TagString: Untagged
@@ -6138,6 +6158,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222152557}
   m_CullTransparentMesh: 1
+--- !u!114 &1222152561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222152557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
+  m_Padding:
+    m_Left: 130
+    m_Right: 70
+    m_Top: 85
+    m_Bottom: 70
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 40, y: 40}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1342362090
 GameObject:
   m_ObjectHideFlags: 0
@@ -7067,7 +7111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChangeTint
   hoverMultAmount: 1.15
-  pressMultAmount: 1
+  pressMultAmount: 0.75
 --- !u!114 &1779198198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7337,7 +7381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChangeTint
   hoverMultAmount: 1.15
-  pressMultAmount: 1
+  pressMultAmount: 0.75
 --- !u!1 &1864432535
 GameObject:
   m_ObjectHideFlags: 0
