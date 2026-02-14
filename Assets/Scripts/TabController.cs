@@ -34,5 +34,6 @@ public class TabController : MonoBehaviour
         ButtonChangeTint hover = tabImages[i].GetComponent<ButtonChangeTint>();
         if (hover != null)
             hover.SetBaseColors(c);
+            hover.SetSelected(selected);
     }
 }
