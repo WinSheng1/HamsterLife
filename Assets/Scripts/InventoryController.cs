@@ -1,20 +1,47 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
+    private ItemDictionary itemDictionary;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private int numberOfSlots;
-    [SerializeField] private GameObject[] itemPrefabs;
 
     void Start()
     {
+        itemDictionary = FindFirstObjectByType<ItemDictionary>();
+    }
+
+    public List<InventorySaveData> SaveInventory()
+    {
+        List<InventorySaveData> inventoryItems = new List<InventorySaveData>();
+        foreach (Transform slotTransform in inventoryPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.currentItem != null)
+            {
+                Item item = slot.currentItem.GetComponent<Item>();
+                inventoryItems.Add(new InventorySaveData { itemID = item.ID, slotIndex = slotTransform.GetSiblingIndex() });
+            }
+        }
+        return inventoryItems;
+    }
+
+    public void LoadInventory(List<InventorySaveData> inventorySaveData)
+    {
         for (int i = 0; i < numberOfSlots; i++)
         {
-            Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-            if (i < itemPrefabs.Length)
+            Instantiate(slotPrefab, inventoryPanel.transform);
+        }
+
+        foreach (InventorySaveData data in inventorySaveData)
+        {
+            Slot slot = inventoryPanel.transform.GetChild(data.slotIndex).GetComponent<Slot>();
+            GameObject itemPrefab = itemDictionary.GetItemPrefab(data.itemID);
+            if (itemPrefab != null)
             {
-                GameObject item = Instantiate(itemPrefabs[i], slot.transform);
+                GameObject item = Instantiate(itemPrefab, slot.transform);
                 item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 slot.currentItem = item;
             }

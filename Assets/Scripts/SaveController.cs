@@ -6,11 +6,14 @@ public class SaveController : MonoBehaviour
 {
     private string saveLocation;
     private CameraBoundsManager boundsManager;
+    private InventoryController inventoryController;
 
     void Start()
     {
         boundsManager = FindFirstObjectByType<CameraBoundsManager>();
         saveLocation = Path.Combine(Application.persistentDataPath, "savefile.json");
+        inventoryController = FindAnyObjectByType<InventoryController>();
+
         LoadGame();
     }
 
@@ -19,6 +22,7 @@ public class SaveController : MonoBehaviour
         SaveData data = new SaveData();
         data.playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         data.currentRoom = boundsManager.GetCurrentRoom();
+        data.inventorySaveData = inventoryController.SaveInventory();
 
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(saveLocation, json);
@@ -36,6 +40,8 @@ public class SaveController : MonoBehaviour
             player.transform.position = data.playerPosition;
 
             boundsManager.SetRoom(data.currentRoom);
+
+            inventoryController.LoadInventory(data.inventorySaveData);
 
             Debug.Log("Game Loaded from " + saveLocation);
         }
