@@ -1,0 +1,39 @@
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class InteractableDrawer : MonoBehaviour, IInteractable
+{
+    public bool isInteracted { get; private set; }
+    public string drawerID { get; private set; }
+    public GameObject itemPrefab; // Item prefab to spawn when the drawer is interacted with
+    public Sprite interactedSprite;
+
+    void Start()
+    {
+        drawerID ??= GlobalHelper.GenerateUniqueID(gameObject);
+    }
+
+    public bool CanInteract()
+    {
+        return !isInteracted;
+    }
+
+    public void Interact()
+    {
+        if (!CanInteract()) return;
+        OpenDrawer();
+    }
+
+    private void OpenDrawer()
+    {
+        isInteracted = true;
+        if (interactedSprite != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = interactedSprite;
+        }
+        if (itemPrefab != null)
+        {
+            //GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.up, Quaternion.identity);
+        }
+    }
+}
