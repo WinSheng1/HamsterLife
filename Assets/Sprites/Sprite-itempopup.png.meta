@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d7eed613bbccd2741bf4eb261db14b98
+guid: 8b4f9f683fb9cc84e8d9cf5a9715b373
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8683839657810091774
-    second: Sprite-pagebutton_0
+      213: 6778495238431500207
+    second: Sprite-itempopup_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-pagebutton_0
+      name: Sprite-itempopup_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 8
+        width: 52
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 201a7c517ddcc7780800000000000000
-      internalID: -8683839657810091774
+      spriteID: fa7e26e518d021e50800000000000000
+      internalID: 6778495238431500207
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprite-pagebutton_0: -8683839657810091774
+      Sprite-itempopup_0: 6778495238431500207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

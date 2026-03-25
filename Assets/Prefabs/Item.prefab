@@ -116,7 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518764e77394276448adc2299422b296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ID: 0
+  ID: 1
+  itemName: Red Item
 --- !u!212 &3759986218771844982
 SpriteRenderer:
   serializedVersion: 2
@@ -211,4 +212,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.7
+  m_Radius: 0.5
