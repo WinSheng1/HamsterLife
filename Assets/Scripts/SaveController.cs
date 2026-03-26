@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using System.IO;
-using Unity.Cinemachine;
 using UnityEngine;
 
 public class SaveController : MonoBehaviour
@@ -48,6 +48,8 @@ public class SaveController : MonoBehaviour
         else
         {
             SaveGame();
+
+            inventoryController.LoadInventory(new List<InventorySaveData>());
         }
     }
 }
