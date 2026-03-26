@@ -33,7 +33,16 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
         }
         if (itemPrefab != null)
         {
-            //GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.up, Quaternion.identity);
+            InventoryController inventoryController = FindFirstObjectByType<InventoryController>();
+            if (inventoryController != null)
+            {
+                bool added = inventoryController.AddItem(itemPrefab);
+                if (added)
+                {
+                    Item item = itemPrefab.GetComponent<Item>();
+                    item.PickUp();
+                }
+            }
         }
     }
 }
