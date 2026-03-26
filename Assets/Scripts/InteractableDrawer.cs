@@ -21,16 +21,13 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
     public void Interact()
     {
         if (!CanInteract()) return;
-        OpenDrawer();
+        InteractDrawer();
     }
 
-    private void OpenDrawer()
+    private void InteractDrawer()
     {
-        isInteracted = true;
-        if (interactedSprite != null)
-        {
-            GetComponent<SpriteRenderer>().sprite = interactedSprite;
-        }
+        setInteracted(true);
+        
         if (itemPrefab != null)
         {
             InventoryController inventoryController = FindFirstObjectByType<InventoryController>();
@@ -43,6 +40,15 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
                     item.PickUp();
                 }
             }
+        }
+    }
+
+    public void setInteracted(bool interacted)
+    {
+        isInteracted = interacted;
+        if (interacted && interactedSprite != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = interactedSprite;
         }
     }
 }

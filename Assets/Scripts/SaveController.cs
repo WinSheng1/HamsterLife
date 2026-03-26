@@ -7,14 +7,20 @@ public class SaveController : MonoBehaviour
     private string saveLocation;
     private CameraBoundsManager boundsManager;
     private InventoryController inventoryController;
+    private InteractableDrawer[] interactableDrawers;
 
     void Start()
     {
-        boundsManager = FindFirstObjectByType<CameraBoundsManager>();
-        saveLocation = Path.Combine(Application.persistentDataPath, "savefile.json");
-        inventoryController = FindAnyObjectByType<InventoryController>();
-
+        InitialiseComponents();
         LoadGame();
+    }
+
+    private void InitialiseComponents()
+    {
+        saveLocation = Path.Combine(Application.persistentDataPath, "savefile.json");
+        boundsManager = FindFirstObjectByType<CameraBoundsManager>();
+        inventoryController = FindAnyObjectByType<InventoryController>();
+        interactableDrawers = FindObjectsByType<InteractableDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
     }
 
     public void SaveGame()
@@ -23,10 +29,25 @@ public class SaveController : MonoBehaviour
         data.playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         data.currentRoom = boundsManager.GetCurrentRoom();
         data.inventorySaveData = inventoryController.SaveInventory();
+        data.drawersSaveData = GetDrawersState();
 
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(saveLocation, json);
         Debug.Log("Game Saved to " + saveLocation);
+    }
+
+    private List<DrawerSaveData> GetDrawersState()
+    {
+        List<DrawerSaveData> drawersState = new List<DrawerSaveData>();
+        foreach (InteractableDrawer drawer in interactableDrawers)
+        {
+            drawersState.Add(new DrawerSaveData
+            {
+                drawerID = drawer.drawerID,
+                isInteracted = drawer.isInteracted
+            });
+        }
+        return drawersState;
     }
 
     public void LoadGame()
@@ -43,6 +64,8 @@ public class SaveController : MonoBehaviour
 
             inventoryController.LoadInventory(data.inventorySaveData);
 
+            LoadDrawersState(data.drawersSaveData);
+
             Debug.Log("Game Loaded from " + saveLocation);
         }
         else
@@ -50,6 +73,18 @@ public class SaveController : MonoBehaviour
             SaveGame();
 
             inventoryController.LoadInventory(new List<InventorySaveData>());
+        }
+    }
+
+    private void LoadDrawersState(List<DrawerSaveData> drawersState)
+    {
+        foreach (InteractableDrawer drawer in interactableDrawers)
+        {
+            DrawerSaveData drawerSaveData = drawersState.Find(d => d.drawerID == drawer.drawerID);
+            if (drawerSaveData != null)
+            {
+                drawer.setInteracted(drawerSaveData.isInteracted);
+            }
         }
     }
 }
