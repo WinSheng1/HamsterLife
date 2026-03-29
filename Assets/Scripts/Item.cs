@@ -6,6 +6,11 @@ public class Item : MonoBehaviour
     public string itemName;
     private bool isBeingCollected = false;
 
+    public virtual void UseItem()
+    {
+        Debug.Log("Using item: " + itemName);
+    }
+
     public virtual void PickUp()
     {
         Sprite itemIcon = GetComponent<SpriteRenderer>()?.sprite;

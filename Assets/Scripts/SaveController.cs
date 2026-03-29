@@ -7,6 +7,7 @@ public class SaveController : MonoBehaviour
     private string saveLocation;
     private CameraBoundsManager boundsManager;
     private InventoryController inventoryController;
+    private HotbarController hotbarController;
     private InteractableDrawer[] interactableDrawers;
 
     void Start()
@@ -20,6 +21,7 @@ public class SaveController : MonoBehaviour
         saveLocation = Path.Combine(Application.persistentDataPath, "savefile.json");
         boundsManager = FindFirstObjectByType<CameraBoundsManager>();
         inventoryController = FindAnyObjectByType<InventoryController>();
+        hotbarController = FindAnyObjectByType<HotbarController>();
         interactableDrawers = FindObjectsByType<InteractableDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
     }
 
@@ -28,7 +30,8 @@ public class SaveController : MonoBehaviour
         SaveData data = new SaveData();
         data.playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         data.currentRoom = boundsManager.GetCurrentRoom();
-        data.inventorySaveData = inventoryController.SaveInventory();
+        data.inventorySaveData = inventoryController.GetInventoryItems();
+        data.hotbarSaveData = hotbarController.GetHotbarItems();
         data.drawersSaveData = GetDrawersState();
 
         string json = JsonUtility.ToJson(data);
@@ -62,7 +65,8 @@ public class SaveController : MonoBehaviour
 
             boundsManager.SetRoom(data.currentRoom);
 
-            inventoryController.LoadInventory(data.inventorySaveData);
+            inventoryController.SetInventoryItems(data.inventorySaveData);
+            hotbarController.SetHotbarItems(data.hotbarSaveData);
 
             LoadDrawersState(data.drawersSaveData);
 
@@ -72,7 +76,7 @@ public class SaveController : MonoBehaviour
         {
             SaveGame();
 
-            inventoryController.LoadInventory(new List<InventorySaveData>());
+            inventoryController.SetInventoryItems(new List<InventorySaveData>());
         }
     }
 

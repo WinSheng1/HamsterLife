@@ -6,7 +6,7 @@ public class InventoryController : MonoBehaviour
     private ItemDictionary itemDictionary;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject slotPrefab;
-    [SerializeField] private int numberOfSlots;
+    [SerializeField] private int slotCount;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class InventoryController : MonoBehaviour
         return false;
     }
 
-    public List<InventorySaveData> SaveInventory()
+    public List<InventorySaveData> GetInventoryItems()
     {
         List<InventorySaveData> inventoryItems = new List<InventorySaveData>();
         foreach (Transform slotTransform in inventoryPanel.transform)
@@ -45,9 +45,9 @@ public class InventoryController : MonoBehaviour
         return inventoryItems;
     }
 
-    public void LoadInventory(List<InventorySaveData> inventorySaveData)
+    public void SetInventoryItems(List<InventorySaveData> inventorySaveData)
     {
-        for (int i = 0; i < numberOfSlots; i++)
+        for (int i = 0; i < slotCount; i++)
         {
             Instantiate(slotPrefab, inventoryPanel.transform);
         }
