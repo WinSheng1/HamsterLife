@@ -1354,8 +1354,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283321934
-  m_fontColor: {r: 0.30588236, g: 0.30588236, b: 0.30588236, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4842,8 +4842,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6002,8 +6002,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 507.5726, y: 700}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 477, y: 680}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726684897
 MonoBehaviour:
@@ -6103,7 +6103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   inventoryPanel: {fileID: 1222152557}
   slotPrefab: {fileID: 3190793926576446872, guid: 4b88de318f629a046b5fec8a5f79dc15, type: 3}
-  slotCount: 24
+  slotCount: 15
 --- !u!1 &854150565
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,8 +6140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -465}
-  m_SizeDelta: {x: -1260, y: -950}
+  m_AnchoredPosition: {x: 0, y: -462.5}
+  m_SizeDelta: {x: -1240, y: -935}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854150567
 MonoBehaviour:
@@ -6156,8 +6156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 13
+    m_Right: 13
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -6182,15 +6182,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4901e474f0690d0498549d053214154f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6219,6 +6219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc1f9f965ed7c848b66659cf66d617b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  hotbarPanel: {fileID: 854150565}
+  slotPrefab: {fileID: 3190793926576446872, guid: 4b88de318f629a046b5fec8a5f79dc15, type: 3}
   slotCount: 5
 --- !u!1 &923152643
 GameObject:
@@ -6286,8 +6288,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283321934
-  m_fontColor: {r: 0.30588236, g: 0.30588236, b: 0.30588236, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6440,8 +6442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 1065.6279, y: 700}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 1002, y: 680}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222152559
 MonoBehaviour:
@@ -6494,14 +6496,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 130
+    m_Left: 120
     m_Right: 70
-    m_Top: 85
+    m_Top: 115
     m_Bottom: 70
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 120, y: 120}
   m_Spacing: {x: 40, y: 40}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -7488,7 +7490,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 277, y: 343.63}
-  m_SizeDelta: {x: 406.2516, y: 130.5814}
+  m_SizeDelta: {x: 364, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779198195
 MonoBehaviour:
@@ -7510,7 +7512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a4ceb280ec8e7c43841ab840d8e0ac0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9880cabcbf529343b37f7d8b64f1554, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7726,7 +7728,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -177, y: 343.63}
-  m_SizeDelta: {x: 406.2516, y: 130.5814}
+  m_SizeDelta: {x: 364, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826533948
 MonoBehaviour:
@@ -7748,7 +7750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8a4ceb280ec8e7c43841ab840d8e0ac0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9880cabcbf529343b37f7d8b64f1554, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8038,8 +8040,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 383.9294, y: 123.4059}
+  m_AnchoredPosition: {x: 0, y: 203.3}
+  m_SizeDelta: {x: 356.3, y: 109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030423343
 MonoBehaviour:
