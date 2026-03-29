@@ -4961,7 +4961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &481612264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5984,7 +5984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &726684896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6002,8 +6002,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
-  m_SizeDelta: {x: 507.5726, y: 837.4946}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 507.5726, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726684897
 MonoBehaviour:
@@ -6025,7 +6025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 234d5f073583f4b4ab4d66c0503cb783, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a988c50f448d60b4cb7bc86c1e4683ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6103,7 +6103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   inventoryPanel: {fileID: 1222152557}
   slotPrefab: {fileID: 3190793926576446872, guid: 4b88de318f629a046b5fec8a5f79dc15, type: 3}
-  numberOfSlots: 30
+  numberOfSlots: 24
 --- !u!1 &923152643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6324,8 +6324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
-  m_SizeDelta: {x: 1065.6279, y: 837.2836}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 1065.6279, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222152559
 MonoBehaviour:
@@ -6347,7 +6347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 33c987473c2252d498f26ba5319b5885, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eeb0567f6f8d25246868c0b585a20363, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7921,7 +7921,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 255}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 383.9294, y: 123.4059}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030423343
