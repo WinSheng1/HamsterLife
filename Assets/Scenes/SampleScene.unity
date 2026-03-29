@@ -7685,6 +7685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableDrawer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8716002008038103408, guid: 77cec550dbff6e44588c0589162f8732, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 4395777704673217877, guid: 0f94c7b6232779e4997297c3b094b9ed, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
