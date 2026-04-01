@@ -4,6 +4,7 @@ public class Item : MonoBehaviour
 {
     public int ID;
     public string itemName;
+    public bool canConsume = false;
     private bool isBeingCollected = false;
 
     public virtual void UseItem()

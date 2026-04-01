@@ -9,6 +9,7 @@ public class HotbarController : MonoBehaviour
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] public int slotCount = 5;
     private Key[] hotbarKeys;
+    private int currentSelectedSlot = -1; // -1 means no slot selected
 
     private void Awake()
     {
@@ -23,24 +24,49 @@ public class HotbarController : MonoBehaviour
 
     void Update()
     {
+        // Check for hotbar slot selection (1-5 keys)
         for (int i = 0; i < slotCount; i++)
         {
             if (Keyboard.current[hotbarKeys[i]].wasPressedThisFrame)
             {
-                UseHotbarItem(i);
+                SelectHotbarSlot(i);
             }
+        }
+
+        // Check for item usage (E key)
+        if (Keyboard.current[Key.E].wasPressedThisFrame)
+        {
+            UseSelectedItem();
         }
     }
 
-    private void UseHotbarItem(int index)
+    private void SelectHotbarSlot(int index)
     {
-        Slot slot = hotbarPanel.transform.GetChild(index).GetComponent<Slot>();
+        currentSelectedSlot = index;
+        Debug.Log("Selected hotbar slot: " + (index + 1));
+    }
+
+    private void UseSelectedItem()
+    {
+        // Can only use an item if a slot is selected
+        if (currentSelectedSlot < 0 || currentSelectedSlot >= slotCount)
+        {
+            return;
+        }
+
+        Slot slot = hotbarPanel.transform.GetChild(currentSelectedSlot).GetComponent<Slot>();
         if (slot != null && slot.currentItem != null)
         {
             Item item = slot.currentItem.GetComponent<Item>();
             if (item != null)
             {
                 item.UseItem();
+                // If item is consumable, destroy it
+                if (item.canConsume)
+                {
+                    Destroy(slot.currentItem);
+                    slot.currentItem = null;
+                }
             }
         }
     }
