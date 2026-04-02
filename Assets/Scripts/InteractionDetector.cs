@@ -13,7 +13,7 @@ public class InteractionDetector : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.performed && interactableInRange != null)
+        if (context.performed && interactableInRange != null && interactableInRange.CanInteract())
         {
             interactableInRange.Interact();
             if (!interactableInRange.CanInteract())

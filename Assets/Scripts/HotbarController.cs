@@ -73,6 +73,13 @@ public class HotbarController : MonoBehaviour
 
     private void UseSelectedItem()
     {
+        // Don't allow using items during or immediately after dialogue
+        DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
+        if (dialogueController != null && (dialogueController.IsDialogueActive || dialogueController.JustClosedDialogue))
+        {
+            return;
+        }
+
         // Can only use an item if a slot is selected
         if (currentSelectedSlot < 0 || currentSelectedSlot >= slotCount)
         {

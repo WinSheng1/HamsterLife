@@ -10,6 +10,8 @@ public class DialogueController : MonoBehaviour
     public TMP_Text dialogueText, nameText;
     public Image portrait;
     private DialogueData currentDialogueData;
+    public bool IsDialogueActive => isDialogueActive;
+    public bool JustClosedDialogue { get; private set; } // Flag to indicate if dialogue was just closed, used to prevent immediate re-opening of dialogue or item usage in the same frame
     private int currentLineIndex;
     private bool isTyping, isDialogueActive;
     private bool skipNextInput; // Skip input for one frame after dialogue starts to prevent immediate skipping of first line
@@ -21,6 +23,8 @@ public class DialogueController : MonoBehaviour
 
     void Update()
     {
+        JustClosedDialogue = false;
+        
         if (isDialogueActive && Keyboard.current[Key.E].wasPressedThisFrame && !skipNextInput)
         {
             if (isTyping)
@@ -88,6 +92,7 @@ public class DialogueController : MonoBehaviour
     private void EndDialogue()
     {
         isDialogueActive = false;
+        JustClosedDialogue = true;
         dialoguePanel.SetActive(false);
         PauseController.TogglePause(false);
     }
