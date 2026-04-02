@@ -42,6 +42,31 @@ public class HotbarController : MonoBehaviour
 
     private void SelectHotbarSlot(int index)
     {
+        // If clicking the same slot, toggle it off (deselect)
+        if (currentSelectedSlot == index)
+        {
+            Slot slot = hotbarPanel.transform.GetChild(index).GetComponent<Slot>();
+            if (slot.rimImage != null)
+                slot.rimImage.SetActive(false);
+            
+            currentSelectedSlot = -1;
+            Debug.Log("Deselected slot");
+            return;
+        }
+
+        // Hide all rims
+        foreach (Transform slotTransform in hotbarPanel.transform)
+        {
+            Slot slot = slotTransform.GetComponent<Slot>();
+            if (slot.rimImage != null)
+                slot.rimImage.SetActive(false);
+        }
+
+        // Show selected rim
+        Slot selectedSlot = hotbarPanel.transform.GetChild(index).GetComponent<Slot>();
+        if (selectedSlot.rimImage != null)
+            selectedSlot.rimImage.SetActive(true);
+
         currentSelectedSlot = index;
         Debug.Log("Selected hotbar slot: " + (index + 1));
     }
