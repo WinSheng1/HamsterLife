@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c5c112adf3e3043ad027d4192c3984, type: 3}
   m_Name: DrawerNoteDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  npcName: 
+  npcName: Hamster
   npcPortrait: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - testing this is the first line of words
+  - testing this is the second line of words
   typingSpeed: 0.05
