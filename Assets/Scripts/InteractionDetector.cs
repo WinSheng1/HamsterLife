@@ -5,17 +5,26 @@ public class InteractionDetector : MonoBehaviour
 {
     private IInteractable interactableInRange = null;
     public GameObject interactionPrompt;
+    private bool justInteracted = false; // Flag to track if interaction happened this frame
 
     void Start()
     {
         interactionPrompt.SetActive(false);
     }
 
+    void Update()
+    {
+        justInteracted = false; // Reset at start of frame
+    }
+
+    public bool JustInteracted => justInteracted;
+
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.performed && interactableInRange != null && interactableInRange.CanInteract())
         {
             interactableInRange.Interact();
+            justInteracted = true;
             if (!interactableInRange.CanInteract())
             {
                 interactableInRange = null;

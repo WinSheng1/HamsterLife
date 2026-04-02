@@ -73,9 +73,9 @@ public class HotbarController : MonoBehaviour
 
     private void UseSelectedItem()
     {
-        // Don't allow using items during or immediately after dialogue
-        DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
-        if (dialogueController != null && (dialogueController.IsDialogueActive || dialogueController.JustClosedDialogue))
+        // Don't use items if an interaction just occurred this frame
+        InteractionDetector interactionDetector = FindFirstObjectByType<InteractionDetector>();
+        if (interactionDetector != null && interactionDetector.JustInteracted)
         {
             return;
         }

@@ -9,9 +9,8 @@ public class DialogueController : MonoBehaviour
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
     public Image portrait;
+    private GameObject hotbarPanel;
     private DialogueData currentDialogueData;
-    public bool IsDialogueActive => isDialogueActive;
-    public bool JustClosedDialogue { get; private set; } // Flag to indicate if dialogue was just closed, used to prevent immediate re-opening of dialogue or item usage in the same frame
     private int currentLineIndex;
     private bool isTyping, isDialogueActive;
     private bool skipNextInput; // Skip input for one frame after dialogue starts to prevent immediate skipping of first line
@@ -19,12 +18,11 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         dialoguePanel.SetActive(false);
+        hotbarPanel = FindFirstObjectByType<HotbarController>().gameObject;
     }
 
     void Update()
     {
-        JustClosedDialogue = false;
-        
         if (isDialogueActive && Keyboard.current[Key.E].wasPressedThisFrame && !skipNextInput)
         {
             if (isTyping)
@@ -58,6 +56,7 @@ public class DialogueController : MonoBehaviour
         portrait.sprite = currentDialogueData.npcPortrait;
 
         PauseController.TogglePause(true);
+        hotbarPanel.SetActive(false);
 
         StartCoroutine(TypeLine());
     }
@@ -92,8 +91,8 @@ public class DialogueController : MonoBehaviour
     private void EndDialogue()
     {
         isDialogueActive = false;
-        JustClosedDialogue = true;
         dialoguePanel.SetActive(false);
+        hotbarPanel.SetActive(true);
         PauseController.TogglePause(false);
     }
 }
