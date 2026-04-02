@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractableDrawer : MonoBehaviour, IInteractable
@@ -7,6 +6,7 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
     public string drawerID { get; private set; }
     public GameObject itemPrefab; // Item prefab to spawn when the drawer is interacted with
     public Sprite interactedSprite;
+    public DialogueData drawerDialogue;
 
     void Start()
     {
@@ -15,12 +15,21 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return !isInteracted;
+        if (isInteracted) return false;
+        
+        MenuController menuController = FindFirstObjectByType<MenuController>();
+        if (menuController != null && menuController.IsMenuOpen)
+            return false;
+        
+        return true;
     }
 
     public void Interact()
     {
-        if (!CanInteract()) return;
+        if (!CanInteract()) 
+        {
+            return;
+        }
         InteractDrawer();
     }
 
@@ -39,6 +48,15 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
                     Item item = itemPrefab.GetComponent<Item>();
                     item.PickUp();
                 }
+            }
+        }
+
+        if (drawerDialogue != null)
+        {
+            DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
+            if (dialogueController != null)
+            {
+                dialogueController.PlayDialogue(drawerDialogue);
             }
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;
+    public bool IsMenuOpen => menuPanel.activeSelf;
     
     void Start()
     {
