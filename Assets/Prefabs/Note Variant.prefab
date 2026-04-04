@@ -13,9 +13,25 @@ PrefabInstance:
       value: Note Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 731657462, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
+      objectReference: {fileID: 602045619, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
+    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: ID
       value: 2
@@ -111,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 6552357692664501879, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 731657462, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
+      objectReference: {fileID: 602045619, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
     m_RemovedComponents:
     - {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
     m_RemovedGameObjects: []

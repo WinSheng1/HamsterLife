@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ID: 1
   itemName: Red Item
+  canConsume: 0
 --- !u!212 &3759986218771844982
 SpriteRenderer:
   serializedVersion: 2
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.33, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
