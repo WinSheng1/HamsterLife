@@ -9,6 +9,7 @@ public class SaveController : MonoBehaviour
     private InventoryController inventoryController;
     private HotbarController hotbarController;
     private InteractableDrawer[] interactableDrawers;
+    private InteractableItemDrawer[] interactableItemDrawers;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class SaveController : MonoBehaviour
         inventoryController = FindAnyObjectByType<InventoryController>();
         hotbarController = FindAnyObjectByType<HotbarController>();
         interactableDrawers = FindObjectsByType<InteractableDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        interactableItemDrawers = FindObjectsByType<InteractableItemDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
     }
 
     public void SaveGame()
@@ -43,6 +45,14 @@ public class SaveController : MonoBehaviour
     {
         List<DrawerSaveData> drawersState = new List<DrawerSaveData>();
         foreach (InteractableDrawer drawer in interactableDrawers)
+        {
+            drawersState.Add(new DrawerSaveData
+            {
+                drawerID = drawer.drawerID,
+                isInteracted = drawer.isInteracted
+            });
+        }
+        foreach (InteractableItemDrawer drawer in interactableItemDrawers)
         {
             drawersState.Add(new DrawerSaveData
             {
@@ -87,7 +97,15 @@ public class SaveController : MonoBehaviour
             DrawerSaveData drawerSaveData = drawersState.Find(d => d.drawerID == drawer.drawerID);
             if (drawerSaveData != null)
             {
-                drawer.setInteracted(drawerSaveData.isInteracted);
+                drawer.SetInteracted(drawerSaveData.isInteracted);
+            }
+        }
+        foreach (InteractableItemDrawer drawer in interactableItemDrawers)
+        {
+            DrawerSaveData drawerSaveData = drawersState.Find(d => d.drawerID == drawer.drawerID);
+            if (drawerSaveData != null)
+            {
+                drawer.SetInteracted(drawerSaveData.isInteracted);
             }
         }
     }
