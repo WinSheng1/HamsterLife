@@ -8,6 +8,7 @@ public class NoteUIController : MonoBehaviour
     public static NoteUIController Instance { get; private set; }
     
     [SerializeField] private TMP_Text noteText;
+    [SerializeField] private GameObject notePopup;
     private GameObject hotbarPanel;
     private GameObject menuPanel;
     
@@ -27,8 +28,11 @@ public class NoteUIController : MonoBehaviour
         hotbarPanel = FindFirstObjectByType<HotbarController>().gameObject;
         menuPanel = FindFirstObjectByType<MenuController>().gameObject.transform.Find("Menu").gameObject;
         
-        // Ensure note is hidden on start
-        gameObject.SetActive(false);
+        // Ensure notePopup is hidden on start
+        if (notePopup == null)
+            notePopup = transform.Find("NotePopup").gameObject;
+        
+        notePopup.SetActive(false);
     }
 
     private void Update()
@@ -42,7 +46,7 @@ public class NoteUIController : MonoBehaviour
     public void ShowNote(string message)
     {
         noteText.text = message;
-        gameObject.SetActive(true);
+        notePopup.SetActive(true);
         isNoteOpen = true;
         
         PauseController.TogglePause(true);
@@ -52,7 +56,7 @@ public class NoteUIController : MonoBehaviour
 
     private void CloseNote()
     {
-        gameObject.SetActive(false);
+        notePopup.SetActive(false);
         isNoteOpen = false;
         
         PauseController.TogglePause(false);
