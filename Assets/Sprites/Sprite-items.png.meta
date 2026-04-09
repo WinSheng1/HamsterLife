@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 3464034894354045405
     second: Sprite-items_1
+  - first:
+      213: 2436822686458582964
+    second: Sprite-items_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,7 +114,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -130,10 +133,10 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 16
+        width: 17
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -155,15 +158,15 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc126d18fef41564d912ba8748ae6ec5
-      internalID: 602045619
+      spriteID: 4b71afe825551d120800000000000000
+      internalID: 2436822686458582964
       vertices: []
       indices: 
       edges: []
@@ -172,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a11442977f71eab478c2dcde36cc0b12
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -180,13 +183,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       Sprite-items_0: -7180401474099176673
       Sprite-items_1: 3464034894354045405
-      Sprite-items_2: 602045619
+      Sprite-items_2: 2436822686458582964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
