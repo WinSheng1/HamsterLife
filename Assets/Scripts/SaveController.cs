@@ -97,6 +97,7 @@ public class SaveController : MonoBehaviour
             SaveGame();
 
             inventoryController.SetInventoryItems(new List<InventorySaveData>());
+            hotbarController.SetHotbarItems(new List<InventorySaveData>());
         }
     }
 
