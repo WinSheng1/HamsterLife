@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 36159ec8bf32fda42b71c198eeaacb44
+guid: 1a8c9c3a6f03c814782e2482aaa23c75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 748355857571326288
-    second: Sprite-iteractablesidetable_0
-  - first:
-      213: 2099895986013739730
-    second: Sprite-iteractablesidetable_1
+      213: -1304612660245211842
+    second: Sprite-interactabletable2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-iteractablesidetable_0
+      name: Sprite-interactabletable2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 15
+        y: 2
+        width: 16
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0592f1000b1b26a00800000000000000
-      internalID: 748355857571326288
+      spriteID: e355b9892b515ede0800000000000000
+      internalID: -1304612660245211842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-iteractablesidetable_1
+      name: Sprite-interactabletable2_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 15
+        x: 16
+        y: 2
+        width: 16
+        height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2da1e970644542d10800000000000000
-      internalID: 2099895986013739730
+      spriteID: c861f26b08b12c04ca739de13a574d99
+      internalID: -550108957
       vertices: []
       indices: 
       edges: []
@@ -150,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1e572050954408f40b838300eead3663
     internalID: 0
     vertices: []
     indices: 
@@ -158,10 +155,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":9.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-iteractablesidetable_0: 748355857571326288
-      Sprite-iteractablesidetable_1: 2099895986013739730
+      Sprite-interactabletable2_0: -1304612660245211842
+      Sprite-interactabletable2_1: -550108957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

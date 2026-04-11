@@ -22,7 +22,7 @@ public class InteractableDrawer : MonoBehaviour, IInteractable
         return true;
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
         if (!CanInteract()) 
         {

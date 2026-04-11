@@ -1,47 +1,21 @@
 using UnityEngine;
 
-public class InteractableItemDrawer : MonoBehaviour, IInteractable
+public class InteractableItemDrawer : InteractableDrawer
 {
-    public bool isInteracted { get; private set; }
-    public string drawerID { get; private set; }
     public GameObject itemPrefab;
-    public Sprite interactedSprite;
-    public DialogueData noteDialogue;
-    public DialogueData lockedDialogue;
+    public DialogueData dialogue;
 
-    void Start()
-    {
-        drawerID ??= GlobalHelper.GenerateUniqueID(gameObject);
-    }
-
-    public bool CanInteract()
-    {
-        if (isInteracted) return false;
-        
-        MenuController menuController = FindFirstObjectByType<MenuController>();
-        if (menuController != null && menuController.IsMenuOpen)
-            return false;
-        
-        return true;
-    }
-
-    public void Interact()
+    public override void Interact()
     {
         if (!CanInteract()) 
         {
             return;
         }
-        if (HasKeySelected())
-        {
-            InteractDrawer();
-        }
-        else
-        {
-            PlayLockedDialogue();
-        }
+        
+        InteractDrawer();
     }
 
-    private void InteractDrawer()
+    protected virtual void InteractDrawer()
     {
         SetInteracted(true);
         
@@ -59,48 +33,12 @@ public class InteractableItemDrawer : MonoBehaviour, IInteractable
             }
         }
 
-        if (noteDialogue != null)
+        if (dialogue != null)
         {
             DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
             if (dialogueController != null)
             {
-                dialogueController.PlayDialogue(noteDialogue);
-            }
-        }
-    }
-
-    public void SetInteracted(bool interacted)
-    {
-        isInteracted = interacted;
-        if (interacted && interactedSprite != null)
-        {
-            GetComponent<SpriteRenderer>().sprite = interactedSprite;
-        }
-    }
-
-    private bool HasKeySelected()
-    {
-        HotbarController hotbarController = FindFirstObjectByType<HotbarController>();
-        if (hotbarController == null) return false;
-        
-        int selectedSlot = hotbarController.GetCurrentSelectedSlot();
-        if (selectedSlot < 0) return false;
-        
-        Slot slot = hotbarController.GetSlot(selectedSlot);
-        if (slot?.currentItem == null) return false;
-        
-        Item item = slot.currentItem.GetComponent<Item>();
-        return item != null && item.itemName == "Key";
-    }
-
-    private void PlayLockedDialogue()
-    {
-        if (lockedDialogue != null)
-        {
-            DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
-            if (dialogueController != null)
-            {
-                dialogueController.PlayDialogue(lockedDialogue);
+                dialogueController.PlayDialogue(dialogue);
             }
         }
     }

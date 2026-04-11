@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2c5c112adf3e3043ad027d4192c3984, type: 3}
-  m_Name: DrawerLockedDialogue
+  m_Name: NoteDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   npcName: Hamster
   npcPortrait: {fileID: 21300000, guid: 3869ef6d960ff9843999e1eaf5a0757d, type: 3}
   dialogueLines:
-  - I need a key to open this...
+  - There's a note in here
+  - I wonder what it says...
   typingSpeed: 0.05

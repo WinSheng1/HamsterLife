@@ -10,6 +10,7 @@ public class SaveController : MonoBehaviour
     private HotbarController hotbarController;
     private InteractableDrawer[] interactableDrawers;
     private InteractableItemDrawer[] interactableItemDrawers;
+    private InteractableLockedDrawer[] interactableLockedDrawers;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class SaveController : MonoBehaviour
         hotbarController = FindAnyObjectByType<HotbarController>();
         interactableDrawers = FindObjectsByType<InteractableDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         interactableItemDrawers = FindObjectsByType<InteractableItemDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        interactableLockedDrawers = FindObjectsByType<InteractableLockedDrawer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
     }
 
     public void SaveGame()
@@ -53,6 +55,14 @@ public class SaveController : MonoBehaviour
             });
         }
         foreach (InteractableItemDrawer drawer in interactableItemDrawers)
+        {
+            drawersState.Add(new DrawerSaveData
+            {
+                drawerID = drawer.drawerID,
+                isInteracted = drawer.isInteracted
+            });
+        }
+        foreach (InteractableLockedDrawer drawer in interactableLockedDrawers)
         {
             drawersState.Add(new DrawerSaveData
             {
@@ -101,6 +111,14 @@ public class SaveController : MonoBehaviour
             }
         }
         foreach (InteractableItemDrawer drawer in interactableItemDrawers)
+        {
+            DrawerSaveData drawerSaveData = drawersState.Find(d => d.drawerID == drawer.drawerID);
+            if (drawerSaveData != null)
+            {
+                drawer.SetInteracted(drawerSaveData.isInteracted);
+            }
+        }
+        foreach (InteractableLockedDrawer drawer in interactableLockedDrawers)
         {
             DrawerSaveData drawerSaveData = drawersState.Find(d => d.drawerID == drawer.drawerID);
             if (drawerSaveData != null)
