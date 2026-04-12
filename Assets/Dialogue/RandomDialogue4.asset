@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2c5c112adf3e3043ad027d4192c3984, type: 3}
-  m_Name: DrawerNoteDialogue
+  m_Name: RandomDialogue4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  npcName: Hamster
-  npcPortrait: {fileID: 21300000, guid: 3869ef6d960ff9843999e1eaf5a0757d, type: 3}
+  npcName: Hampter
+  npcPortrait: {fileID: 21300000, guid: e82f5a09fbe3a0340997edf9526ca874, type: 3}
   dialogueLines:
-  - testing this is the first line of words
-  - testing this is the second line of words
+  - Hedo
   typingSpeed: 0.05

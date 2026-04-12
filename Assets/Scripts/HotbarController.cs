@@ -103,6 +103,17 @@ public class HotbarController : MonoBehaviour
         }
     }
 
+    public int GetCurrentSelectedSlot()
+    {
+        return currentSelectedSlot;
+    }
+
+    public Slot GetSlot(int index)
+    {
+        if (index < 0 || index >= hotbarPanel.transform.childCount) return null;
+        return hotbarPanel.transform.GetChild(index).GetComponent<Slot>();
+    }
+
     public List<InventorySaveData> GetHotbarItems()
     {
         List<InventorySaveData> hotbarItems = new List<InventorySaveData>();
