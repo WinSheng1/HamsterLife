@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1467921845647094130
+--- !u!1001 &3558392826065262097
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,47 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2981360604213001255, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Name
-      value: Note Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: m_Size.y
-      value: 1
+      value: Item Variant 4
       objectReference: {fileID: 0}
     - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2436822686458582964, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
-    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3759986218771844982, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: ID
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4958833047408084262, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
     - target: {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: itemName
-      value: Note
-      objectReference: {fileID: 0}
-    - target: {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      propertyPath: canConsume
-      value: 0
+      value: Cookie
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0.52064663
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0.49483836
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_AnchorMax.x
@@ -106,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.59
+      value: 0.30184293
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.91
+      value: -2.7088828
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -127,34 +103,9 @@ PrefabInstance:
     - target: {fileID: 6552357692664501879, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2436822686458582964, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
-    m_RemovedComponents:
-    - {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
+      objectReference: {fileID: 4958833047408084262, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2981360604213001255, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5551197569397691497}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
---- !u!1 &4395777704673217877 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2981360604213001255, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
-  m_PrefabInstance: {fileID: 1467921845647094130}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5551197569397691497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4395777704673217877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117d33f60f3912a419e250aec8d1f675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  ID: 2
-  itemName: Note
-  canConsume: 0
-  noteMessage: Belo
