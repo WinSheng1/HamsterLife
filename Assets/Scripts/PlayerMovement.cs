@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (PauseController.IsPaused)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         rb.linearVelocity = moveInput * speed;
     }
 
