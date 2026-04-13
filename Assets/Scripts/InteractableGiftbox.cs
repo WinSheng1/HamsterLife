@@ -13,6 +13,11 @@ public class InteractableGiftbox : InteractableDrawer
             return;
         }
 
+        if (HasNoteSelected())
+        {
+            return;
+        }
+
         // Check if the locked drawer has been interacted with
         InteractableLockedDrawer lockedDrawer = FindFirstObjectByType<InteractableLockedDrawer>();
         if (lockedDrawer != null && !lockedDrawer.isInteracted)
@@ -33,6 +38,21 @@ public class InteractableGiftbox : InteractableDrawer
         {
             SceneManager.LoadScene(cutsceneSceneName);
         }
+    }
+
+    private bool HasNoteSelected()
+    {
+        HotbarController hotbarController = FindFirstObjectByType<HotbarController>();
+        if (hotbarController == null) return false;
+        
+        int selectedSlot = hotbarController.GetCurrentSelectedSlot();
+        if (selectedSlot < 0) return false;
+        
+        Slot slot = hotbarController.GetSlot(selectedSlot);
+        if (slot?.currentItem == null) return false;
+        
+        Item item = slot.currentItem.GetComponent<Item>();
+        return item != null && item.itemName == "Note";
     }
 
     private void PlayNoteRequiredDialogue()

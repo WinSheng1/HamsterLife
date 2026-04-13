@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: InventoryFullDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   npcName: Hedo
-  npcPortrait: {fileID: 4541540816908189413, guid: 28da2e9fc2b5e454cb30b52f7b21d946, type: 3}
+  npcPortrait: {fileID: 21300000, guid: 28da2e9fc2b5e454cb30b52f7b21d946, type: 3}
   dialogueLines:
   - Hiom you are inventory full
   typingSpeed: 0.05
