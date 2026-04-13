@@ -16,17 +16,6 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.SetParent(transform.root); // Move to root to ensure it's on top of other UI elements
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f;
-
-        // Deselect the hotbar slot if the item is being dragged from the hotbar
-        Slot slot = originalParent.GetComponent<Slot>();
-        if (slot != null)
-        {
-            HotbarController hotbarController = FindFirstObjectByType<HotbarController>();
-            if (hotbarController != null)
-            {
-                hotbarController.DeselectCurrentSlot();
-            }
-        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -69,5 +58,16 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             transform.SetParent(originalParent); // Return to the original parent if dropped outside a valid slot
         }
         transform.GetComponent<RectTransform>().anchoredPosition = Vector2.zero; // Reset position to center of the slot
+
+        // Deselect the hotbar slot if the item was being dragged from the hotbar
+        Slot slot = originalParent.GetComponent<Slot>();
+        if (slot != null)
+        {
+            HotbarController hotbarController = FindFirstObjectByType<HotbarController>();
+            if (hotbarController != null)
+            {
+                hotbarController.DeselectCurrentSlot();
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5311324243490734355, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: canConsume
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5606561799275509622, guid: 6a5d949da7d8f264ca8ee6ab501a0943, type: 3}
       propertyPath: m_Pivot.x

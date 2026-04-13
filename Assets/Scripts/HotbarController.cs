@@ -152,7 +152,7 @@ public class HotbarController : MonoBehaviour
         foreach (RaycastResult result in results)
         {
             Slot slot = result.gameObject.GetComponent<Slot>();
-            if (slot != null)
+            if (slot != null && slot.transform.IsChildOf(hotbarPanel.transform))
             {
                 // Find which slot this is in the hotbar
                 int slotIndex = slot.transform.GetSiblingIndex();
