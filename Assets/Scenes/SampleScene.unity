@@ -8491,7 +8491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69cb02bc4a0aab340a56367ebefb50ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableGiftbox
-  interactedSprite: {fileID: -1560590142, guid: e164ead98d97975499de85fa3d67ecc7, type: 3}
+  interactedSprite: {fileID: 887067005, guid: fd9a89e858c82d745a8ae592bc6c6e6d, type: 3}
   cutsceneSceneName: GiftOpenScene
 --- !u!1 &1050411544
 GameObject:
