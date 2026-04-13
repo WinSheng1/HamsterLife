@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class InteractableGiftbox : InteractableDrawer
 {
-    [SerializeField] private PlayableDirector cutsceneDirector;
+    [SerializeField] private string cutsceneSceneName;
 
     public override void Interact()
     {
@@ -13,14 +13,16 @@ public class InteractableGiftbox : InteractableDrawer
         }
 
         SetInteracted(true);
-        PlayCutscene();
-    }
-
-    private void PlayCutscene()
-    {
-        if (cutsceneDirector != null)
+        
+        SaveController saveController = FindFirstObjectByType<SaveController>();
+        if (saveController != null)
         {
-            cutsceneDirector.Play();
+            saveController.SaveGame();
+        }
+        
+        if (!string.IsNullOrEmpty(cutsceneSceneName))
+        {
+            SceneManager.LoadScene(cutsceneSceneName);
         }
     }
 }
