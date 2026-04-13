@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: 7678695133396473470
     second: Sprite-items_7
+  - first:
+      213: -3595599144003235575
+    second: Sprite-items_8
+  - first:
+      213: -6610193888027344416
+    second: Sprite-items_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,7 +131,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -147,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -169,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -191,7 +197,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -213,7 +219,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -235,7 +241,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -257,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -279,7 +285,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -296,11 +302,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprite-items_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9011dfaf0add91ec0800000000000000
+      internalID: -3595599144003235575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-items_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e10caf5eafd344a0800000000000000
+      internalID: -6610193888027344416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-items_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b599ad64a4cdf1844a1506573b5b4426
+      internalID: -1560590142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d09578bd99c489e4087328b61e3de09b
+    spriteID: a263393609145434ebcfc476dd8175b6
     internalID: 0
     vertices: []
     indices: 
@@ -314,12 +386,15 @@ TextureImporter:
     nameFileIdTable:
       Sprite-items_0: -7180401474099176673
       Sprite-items_1: 3464034894354045405
+      Sprite-items_10: -1560590142
       Sprite-items_2: 2436822686458582964
       Sprite-items_3: 4958833047408084262
       Sprite-items_4: -3950525478013839145
       Sprite-items_5: -2049325986642536319
       Sprite-items_6: 3337721955669645999
       Sprite-items_7: 7678695133396473470
+      Sprite-items_8: -3595599144003235575
+      Sprite-items_9: -6610193888027344416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
