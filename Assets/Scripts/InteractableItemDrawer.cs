@@ -17,8 +17,6 @@ public class InteractableItemDrawer : InteractableDrawer
 
     protected virtual void InteractDrawer()
     {
-        SetInteracted(true);
-        
         if (itemPrefab != null)
         {
             InventoryController inventoryController = FindFirstObjectByType<InventoryController>();
@@ -27,18 +25,20 @@ public class InteractableItemDrawer : InteractableDrawer
                 bool added = inventoryController.AddItem(itemPrefab);
                 if (added)
                 {
+                    SetInteracted(true);
+                    
                     Item item = itemPrefab.GetComponent<Item>();
                     item.PickUp();
-                }
-            }
-        }
 
-        if (dialogue != null)
-        {
-            DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
-            if (dialogueController != null)
-            {
-                dialogueController.PlayDialogue(dialogue);
+                    if (dialogue != null)
+                    {
+                        DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
+                        if (dialogueController != null)
+                        {
+                            dialogueController.PlayDialogue(dialogue);
+                        }
+                    }
+                }
             }
         }
     }
