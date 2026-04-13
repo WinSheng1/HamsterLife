@@ -7,6 +7,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private int slotCount;
+    [SerializeField] private DialogueData inventoryFullDialogue;
 
     void Start()
     {
@@ -26,7 +27,16 @@ public class InventoryController : MonoBehaviour
                 return true;
             }
         }
-        Debug.Log("Inventory is full");
+        
+        if (inventoryFullDialogue != null)
+        {
+            DialogueController dialogueController = FindFirstObjectByType<DialogueController>();
+            if (dialogueController != null)
+            {
+                dialogueController.PlayDialogue(inventoryFullDialogue);
+            }
+        }
+        
         return false;
     }
 

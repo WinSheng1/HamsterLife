@@ -7999,6 +7999,7 @@ MonoBehaviour:
   inventoryPanel: {fileID: 1222152557}
   slotPrefab: {fileID: 3190793926576446872, guid: 4b88de318f629a046b5fec8a5f79dc15, type: 3}
   slotCount: 15
+  inventoryFullDialogue: {fileID: 11400000, guid: 1c2368d10906c2c49bfaef3172216d51, type: 2}
 --- !u!114 &739122843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8493,6 +8494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableGiftbox
   interactedSprite: {fileID: 887067005, guid: fd9a89e858c82d745a8ae592bc6c6e6d, type: 3}
   cutsceneSceneName: GiftOpenScene
+  noteRequiredDialogue: {fileID: 11400000, guid: 04383b7b0a665ec4a82cc6120d217897, type: 2}
 --- !u!1 &1050411544
 GameObject:
   m_ObjectHideFlags: 0
@@ -8954,13 +8956,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Giftbox
       objectReference: {fileID: 0}
+    - target: {fileID: 4789042825038105966, guid: 77cec550dbff6e44588c0589162f8732, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7772129653651375669, guid: 77cec550dbff6e44588c0589162f8732, type: 3}
       propertyPath: m_Size.y
-      value: 1.6876792
+      value: 1.1471668
       objectReference: {fileID: 0}
     - target: {fileID: 7772129653651375669, guid: 77cec550dbff6e44588c0589162f8732, type: 3}
       propertyPath: m_Offset.y
-      value: -0.62052304
+      value: -0.35026687
       objectReference: {fileID: 0}
     - target: {fileID: 7772129653651375669, guid: 77cec550dbff6e44588c0589162f8732, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2c5c112adf3e3043ad027d4192c3984, type: 3}
-  m_Name: KeyDialogue
+  m_Name: InventoryFullDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  npcName: Hamster
-  npcPortrait: {fileID: 21300000, guid: 3869ef6d960ff9843999e1eaf5a0757d, type: 3}
+  npcName: Hedo
+  npcPortrait: {fileID: 4541540816908189413, guid: 28da2e9fc2b5e454cb30b52f7b21d946, type: 3}
   dialogueLines:
-  - there's a key here
+  - Hiom you are inventory full
   typingSpeed: 0.05
