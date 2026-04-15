@@ -15,5 +15,5 @@ MonoBehaviour:
   npcName: Hamster
   npcPortrait: {fileID: 21300000, guid: 3869ef6d960ff9843999e1eaf5a0757d, type: 3}
   dialogueLines:
-  - there's a key here
+  - There's a key here
   typingSpeed: 0.05
