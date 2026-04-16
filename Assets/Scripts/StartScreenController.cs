@@ -1,10 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StartScreenController : MonoBehaviour
 {
+    public GameObject loadingUI;
+    private LoadingScreenController loadingScreenController;
+
+    private void Start()
+    {
+        loadingUI.SetActive(false);
+    }
+
     public void OnStartButtonPressed()
     {
-        SceneManager.LoadScene("SampleScene");
+        loadingUI.SetActive(true);
+        loadingScreenController = loadingUI.GetComponent<LoadingScreenController>();
+        loadingScreenController.LoadScene("SampleScene");
     }
 }
